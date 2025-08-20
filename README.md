@@ -8,7 +8,7 @@
 <img width="2876" height="1428" alt="Image" src="https://github.com/user-attachments/assets/9349bdec-83a1-44a9-a1bb-9b7ed4fb3207" />
 
 
-- [Demo Project](https://nastaranghorbanpour.github.io/parallax-1/)
+- [Demo Project](https://nastaranghorbanpour.github.io/parallax-2/)
 - Developed by Nastaran Ghorbanpour
 - Created - 2025-08-11
 - Technologies Used : Html , css , tailwind , javascript
