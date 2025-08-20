@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+@layer base {
+
+    h1,
+    h2,
+    p,
+    a,
+    div {
+        font-family: host;
+    }
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.sec10-span {
+    width: 0;
+    height: 4px;
+    background-color: #fff;
+    transition: 1s;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+#sec8 {
+    position: relative;
+    width: 100vw;
+    height: 100svh;
+    background-color: #2F2B28;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sticky-cols {
+    padding: 10px;
+}
+
+.sticky-cols-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.col {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    will-change: transform;
+}
+
+.col h2 {
+    color: white;
+    font-size: 40px;
+    width: 60%;
+    font-weight: 700;
+}
+
+.col p {
+    width: 50%;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+}
+
+.col-2 {
+    transform: translateX(100%);
+}
+
+.col-3 {
+    transform: translateX(100%) translateY(100%);
+    padding: 10px;
+}
+
+.col-4 {
+    transform: translateX(100%) translateY(100%);
+}
+
+.col-content,
+.col-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.col-content-wrapper,
+.col-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #181717;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.col-content-wrapper {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col-content-wrapper-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #181717;
+    border-radius: 50px;
+
+}
+
+.col-img-1,
+.col-img-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.col-img-2 {
+    clip-path: polygon(0% 0%, 100% 0%, 0% 0%);
+
+}
+
+.col-img-2 img {
+    transform: scale(1.25);
+}
+
+.slide{
+    position: relative;
+    background-size: cover;
+    >*{
+        font-weight: 700;
+        color: white;
+        position: absolute;
+    }
+    >h2{
+        font-size: 40px;
+        top: 40px; left: 40px;
+    }
+    >p{
+        bottom: 40px;
+        left: 40px;
+        font-size: 15px;
+        width: 25%;
+    }
+    >span{
+        border: 1px solid white;
+        font-size: 15px;
+        padding: 5px;
+        top: 40px;
+        right: 40px;
+        border-radius: 50px;
+    }
+
+}
+.slide-1{
+    background-image: url(../image/activities-1.png);
+}
+.slide-2{
+    background-image: url(../image/activities-2.png);
+}
+.slide-3{
+    background-image: url(../image/activities-3.png);
+}
+@layer theme{
+    .firstAnime{
+        animation: bdr1 3s ease-out infinite alternate;
+    }
+    .secondAnime{
+        animation: bdr2 3s ease-out alternate infinite;
+    }
+}
+
+@keyframes bdr1{
+    0%{border-radius: 58% 34% 42% 37% / 52% 30% 68% 44%  ;}
+    50%{border-radius: 34% 54% 30% 59% / 75% 59% 36% 33% ;}
+    100%{border-radius: 61% 43% 75% 27% / 87% 33% 46% 20%  ;}
+}
+@keyframes bdr2{
+    0%{border-radius: 61% 43% 75% 27% / 87% 33% 46% 20%  ;}
+    50%{border-radius: 58% 34% 42% 37% / 52% 30% 68% 44%  ;}
+    100%{border-radius: 34% 54% 30% 59% / 75% 59% 36% 33%   ;}
+}
+@font-face {
+    font-family: caveat;
+    src: url(../font/Caveat-Bold.ttf);
+}
+
+
+@font-face {
+    font-family: host;
+    src: url(../font/HostGrotesk-Light.ttf);
+}
+
+@keyframes backText {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
